@@ -5,11 +5,11 @@ import "./Collection.sol";
 import "./N2DRewards.sol";
 
 // 특정 스마트 계약으로 보내고 받을 수 있는 인터페이스 활성화
-contract NFTStaking is Ownable, IERC721Reciver {
+contract NFTStaking is Ownable, IERC721Receiver {
     uint256 public totalStaked;
 
     // !struct to store a stake's token, owner, and earning values
-    struct stake {
+    struct Stake {
         uint24 tokenId; // nft tokenid
         uint48 timestamp; // timestamp를 캡처하고 timestamp가 발생하는 순간 블록 보상 계산을 시작해야 한다.
         address owner;  // nft owner
@@ -66,7 +66,7 @@ contract NFTStaking is Ownable, IERC721Reciver {
         }
     }
     // ! NFT Staking Contract에 대한 CLAIM 기능 실행
-    function claim(address account, uint256 calldata tokenIds, bool unstake) internal {
+    function claim(address account, uint256[] calldata tokenIds, bool unstake) internal {
         uint256 tokenId;
         uint256 earned =0;
 
@@ -151,5 +151,4 @@ contract NFTStaking is Ownable, IERC721Reciver {
       return IERC721Receiver.onERC721Received.selector;
     }
   
-}
 }

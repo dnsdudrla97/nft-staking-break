@@ -1,6 +1,5 @@
 // File: @openzeppelin/contracts/utils/introspection/IERC165.sol
-pragma solidity ^0.8.0;
-
+pragma solidity 0.8.4;
 /**
  * @dev Interface of the ERC165 standard, as defined in the
  * https://eips.ethereum.org/EIPS/eip-165[EIP].
@@ -23,7 +22,6 @@ interface IERC165 {
 }
 
 // File: @openzeppelin/contracts/token/ERC721/IERC721.sol
-pragma solidity ^0.8.0;
 /**
  * @dev Required interface of an ERC721 compliant contract.
  */
@@ -166,7 +164,6 @@ interface IERC721 is IERC165 {
 
 
 
-pragma solidity ^0.8.0;
 
 
 /**
@@ -196,7 +193,6 @@ interface IERC721Enumerable is IERC721 {
 
 
 
-pragma solidity ^0.8.0;
 
 
 /**
@@ -226,7 +222,6 @@ abstract contract ERC165 is IERC165 {
 
 
 
-pragma solidity ^0.8.0;
 
 /**
  * @dev String operations.
@@ -295,7 +290,6 @@ library Strings {
 
 
 
-pragma solidity ^0.8.0;
 
 /**
  * @dev Collection of functions related to the address type
@@ -514,7 +508,6 @@ library Address {
 
 
 
-pragma solidity ^0.8.0;
 
 
 /**
@@ -542,7 +535,6 @@ interface IERC721Metadata is IERC721 {
 
 
 
-pragma solidity ^0.8.0;
 
 /**
  * @title ERC721 token receiver interface
@@ -569,7 +561,6 @@ interface IERC721Receiver {
 
 
 // File: @openzeppelin/contracts/token/ERC721/ERC721.sol
-pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/utils/Context.sol";
 /**
@@ -976,7 +967,6 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
 
 
 
-pragma solidity ^0.8.0;
 
 
 
@@ -1138,7 +1128,6 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-pragma solidity ^0.8.0;
 
 contract Collection is ERC721Enumerable, Ownable {
     using Strings for uint256;

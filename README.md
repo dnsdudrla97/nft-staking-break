@@ -44,3 +44,18 @@ npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 # Performance optimizations
 
 For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+
+``` solidity
+deploy steps
+1. Collection contract (ERC721)
+2. Reward token contract (ERC20)
+3. Staking Contract
+	- constructor (mft, token contract address)
+
+4. collection mint (nft byt)
+5. Controller add -> nft staking contract address 
+6. collection(NFT) setApprovalForAll(NFTstaking contract address => true)
+7. STAKE => stake([1])
+
+8. vault => check
+```
